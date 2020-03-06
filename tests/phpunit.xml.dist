@@ -1,0 +1,14 @@
+<phpunit bootstrap="./../vendor/autoload.php"
+         colors="true"
+         stopOnError="true"
+         stopOnFailure="true"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         beStrictAboutTestsThatDoNotTestAnything="false"
+         >
+
+    <php>
+        <ini name="error_reporting" value="E_ALL"/>
+    </php>
+
+</phpunit>
