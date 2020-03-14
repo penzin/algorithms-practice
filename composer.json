@@ -13,7 +13,8 @@
     "autoload": {
         "files": [
             "./src/recursion.php",
-            "./src/binarySearch.php"
+            "./src/binarySearch.php",
+            "./src/selectionSort.php"
         ]
     }
 }
