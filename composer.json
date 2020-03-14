@@ -12,7 +12,8 @@
     },
     "autoload": {
         "files": [
-            "./src/recursion.php"
+            "./src/recursion.php",
+            "./src/binarySearch.php"
         ]
     }
 }
