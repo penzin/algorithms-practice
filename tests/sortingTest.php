@@ -4,18 +4,29 @@ namespace Penzin\AlgorithmsPractice\Tests;
 
 use PHPUnit\Framework\TestCase;
 use function Penzin\AlgorithmsPractice\findSmallestItemIndex;
+use function Penzin\AlgorithmsPractice\quickSortRecursive;
 use function Penzin\AlgorithmsPractice\selectionSort;
 
-class selectionSortTest extends TestCase
+class sortingTest extends TestCase
 {
     /**
      * @dataProvider samples
      * @param array $result
      * @param array $input
      */
-    public function testCanSortList(array $result, array $input): void
+    public function testCanSortListWithSelectionSort(array $result, array $input): void
     {
         $this->assertEquals($result, selectionSort($input));
+    }
+
+    /**
+     * @dataProvider samples
+     * @param array $result
+     * @param array $input
+     */
+    public function testCanSortListWithQuickSort(array $result, array $input): void
+    {
+        $this->assertEquals($result, quickSortRecursive($input));
     }
 
     public function testCanFindSmallest(): void
@@ -33,11 +44,12 @@ class selectionSortTest extends TestCase
         return [
             [[], []],
             [[11], [11]],
-            [[1, 2], [1, 2]],
+            [[1, 1, 2, 2], [2, 2, 1, 1]],
             [[1, 2], [2, 1]],
             [[1, 2, 3], [1, 2, 3]],
             [[43, 44, 56, 65], [44, 43, 65, 56]],
             [[7, 8, 9], [9, 8, 7]],
+            [[42, 42], [42, 42]]
         ];
     }
 }
