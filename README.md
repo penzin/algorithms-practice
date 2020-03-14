@@ -9,4 +9,4 @@ Just clone this repo, run `composer install` and then `./tests/run.sh`.
 * Array sum (recursive)
 * Binary search
 * Selection sorting
-* Quick sorting
+* Quick sorting (recursive)

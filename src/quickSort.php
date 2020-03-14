@@ -13,7 +13,9 @@ function quickSortRecursive(array $inputArray): array
     }
 
     $less = $greater = [];
-    $baseElement = array_shift($inputArray);
+    $baseElementIndex = rand(0, count($inputArray) - 1);
+    $baseElement = $inputArray[$baseElementIndex];
+    unset($inputArray[$baseElementIndex]);
 
     foreach ($inputArray as $item)
     {
