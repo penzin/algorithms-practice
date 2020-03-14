@@ -1,6 +1,10 @@
 # algorithms-practice
 My practice with different basic algorithms, why not?
 
+### Usage
+Just clone this repo run `composer install` and then `./tests/run.sh`.
+
 ### Table of contents
-* factorial (recursive)
-* binary search
+* Factorial (recursive)
+* Binary search
+* Selection sorting
