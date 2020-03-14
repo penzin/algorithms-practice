@@ -7,29 +7,32 @@ use function Penzin\AlgorithmsPractice\factorialRecursively;
 
 class recursionTest extends TestCase
 {
-    public function testCanCalculateFactorialForZeroRecursively(): void
+    /**
+     * @dataProvider samples
+     * @param int $result
+     * @param int $input
+     */
+    public function testCanCalculateFactorialRecursively(int $result, int $input): void
     {
-        $this->assertEquals(1, factorialRecursively(0));
-    }
-
-    public function testCanCalculateFactorialForOneRecursively(): void
-    {
-        $this->assertEquals(1, factorialRecursively(1));
-    }
-
-    public function testCanCalculateFactorialForTwoRecursively(): void
-    {
-        $this->assertEquals(2, factorialRecursively(2));
-    }
-
-    public function testCanCalculateFactorialForSevenRecursively(): void
-    {
-        $this->assertEquals(5040, factorialRecursively(7));
+        $this->assertEquals($result, factorialRecursively($input));
     }
 
     public function testThrowAnExceptionWhenNegativeNumber(): void
     {
         $this->expectException(\RuntimeException::class);
         factorialRecursively(-42);
+    }
+
+    /**
+     * @return array
+     */
+    public static function samples(): array
+    {
+        return [
+            [1, 0],
+            [1, 1],
+            [2, 2],
+            [5040, 7],
+        ];
     }
 }
