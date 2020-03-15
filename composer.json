@@ -16,7 +16,8 @@
             "./src/recursion.php",
             "./src/binarySearch.php",
             "./src/selectionSort.php",
-            "./src/quickSort.php"
+            "./src/quickSort.php",
+            "./src/breadFirstSearch.php"
         ]
     }
 }
