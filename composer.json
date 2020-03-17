@@ -17,7 +17,8 @@
             "./src/binarySearch.php",
             "./src/selectionSort.php",
             "./src/quickSort.php",
-            "./src/breadFirstSearch.php"
+            "./src/breadFirstSearch.php",
+            "./src/dijkstraSearch.php"
         ]
     }
 }

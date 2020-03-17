@@ -10,4 +10,5 @@ Just clone this repo, run `composer install` and then `./tests/run.sh`.
 * Binary search
 * Selection sorting
 * Quick sorting (recursive)
-* Bread-first search in graph (BFS)
+* Bread-first search (search shortest path in unweighted not oriented graph, BFS)
+* Dijkstra's search (search shortest path in weighted oriented graph, SPF)
