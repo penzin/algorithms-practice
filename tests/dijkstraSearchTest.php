@@ -4,6 +4,8 @@ namespace Penzin\AlgorithmsPractice\Tests;
 
 use PHPUnit\Framework\TestCase;
 use function Penzin\AlgorithmsPractice\dijkstraSearch;
+use function Penzin\AlgorithmsPractice\getCostsArray;
+use function Penzin\AlgorithmsPractice\getParentsArray;
 
 class dijkstraSearchTest extends TestCase
 {
@@ -17,29 +19,35 @@ class dijkstraSearchTest extends TestCase
         'finish' => [],
     ];
 
-    /**
-     * @var array
-     */
-    private $costs = [
-        'a' => 6,
-        'b' => 2,
-        'finish' => INF,
-    ];
-
-    /**
-     * @var array
-     */
-    private $parents = [
-        'a' => 'start',
-        'b' => 'start',
-        'finish' => null
-    ];
-
     public function testCanFindShortestPath(): void
     {
         $this->assertEquals(
             6,
-            dijkstraSearch($this->graph, $this->costs, $this->parents)
+            dijkstraSearch($this->graph)
+        );
+    }
+
+    public function testCanGetCostsForGraph(): void
+    {
+        $this->assertEquals(
+            [
+                'a' => 6,
+                'b' => 2,
+                'finish' => INF,
+            ],
+            getCostsArray($this->graph)
+        );
+    }
+
+    public function testCanGetParentsArrayForGraph(): void
+    {
+        $this->assertEquals(
+            [
+                'a' => 'start',
+                'b' => 'start',
+                'finish' => null
+            ],
+            getParentsArray($this->graph)
         );
     }
 }

@@ -4,12 +4,13 @@ namespace Penzin\AlgorithmsPractice;
 
 /**
  * @param array $graph
- * @param array $costs
- * @param array $parents
  * @return int
  */
-function dijkstraSearch(array $graph, array $costs, array $parents): int
+function dijkstraSearch(array $graph): int
 {
+    $costs = getCostsArray($graph);
+    $parents = getParentsArray($graph);
+
     $processed = [];
     while (($node = findLowestCostNode($costs, $processed)) !== null)
     {
@@ -47,4 +48,38 @@ function findLowestCostNode(array $costs, array $processed): ?string
     }
 
     return $lowestNode;
+}
+
+/**
+ * @param array $graph
+ * @return array
+ */
+function getCostsArray(array $graph): array
+{
+    $result = [];
+    $startNeighbourCosts = array_shift($graph);
+
+    foreach (array_keys($graph) as $node)
+    {
+        $result[$node] = $startNeighbourCosts[$node] ?? INF;
+    }
+
+    return $result;
+}
+
+/**
+ * @param array $graph
+ * @return array
+ */
+function getParentsArray(array $graph): array
+{
+    $result = [];
+    $startChildren = array_shift($graph);
+
+    foreach (array_keys($graph) as $node)
+    {
+        $result[$node] = isset($startChildren[$node]) === true ? 'start' : null;
+    }
+
+    return $result;
 }
