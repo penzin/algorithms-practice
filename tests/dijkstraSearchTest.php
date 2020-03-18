@@ -4,6 +4,7 @@ namespace Penzin\AlgorithmsPractice\Tests;
 
 use PHPUnit\Framework\TestCase;
 use function Penzin\AlgorithmsPractice\dijkstraSearch;
+use function Penzin\AlgorithmsPractice\findLowestCostNode;
 use function Penzin\AlgorithmsPractice\getCostsArray;
 use function Penzin\AlgorithmsPractice\getParentsArray;
 
@@ -49,5 +50,33 @@ class dijkstraSearchTest extends TestCase
             ],
             getParentsArray($this->graph)
         );
+    }
+
+    /**
+     * @dataProvider findLowestCostNodeDataProvider
+     * @param array $costs
+     * @param array $processed
+     * @param string|null $result
+     */
+    public function testCanFindLowestCostNode(array $costs, array $processed, ?string $result): void
+    {
+        $this->assertEquals(
+            $result,
+            findLowestCostNode($costs, $processed)
+        );
+    }
+
+    /**
+     * @return array
+     */
+    public static function findLowestCostNodeDataProvider(): array
+    {
+        return [
+            [['a' => 1, 'b' => 2], [], 'a'],
+            [['a' => 0], [], 'a'],
+            [['one' => 10, 'two' => 7, 'three' => INF], [], 'two'],
+            [['a' => 1, 'b' => 2], ['a'], 'b'],
+            [['a' => 1, 'b' => 2], ['a', 'b'], null],
+        ];
     }
 }
