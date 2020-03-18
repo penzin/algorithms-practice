@@ -3,10 +3,10 @@
 namespace Penzin\AlgorithmsPractice\Tests;
 
 use PHPUnit\Framework\TestCase;
-use function Penzin\AlgorithmsPractice\breadFirstSearch;
+use function Penzin\AlgorithmsPractice\breadthFirstSearch;
 use function Penzin\AlgorithmsPractice\preparePlainGraphFromThreeRecursive;
 
-class breadFirstSearchTest extends TestCase
+class breadthFirstSearchTest extends TestCase
 {
     /**
      * @var array
@@ -33,7 +33,7 @@ class breadFirstSearchTest extends TestCase
     {
         $this->assertEquals(
             'Julia (female)',
-            breadFirstSearch(
+            breadthFirstSearch(
                 $this->inputTree,
                 'Me (male)',
                 static function (string $item){
@@ -46,7 +46,7 @@ class breadFirstSearchTest extends TestCase
     {
         $this->assertEquals(
             'Victor sr. (male)',
-            breadFirstSearch(
+            breadthFirstSearch(
                 $this->inputTree,
                 'Me (male)',
                 static function (string $item){
@@ -58,7 +58,7 @@ class breadFirstSearchTest extends TestCase
     public function testCanNotFindANearestBob(): void
     {
         $this->assertNull(
-            breadFirstSearch(
+            breadthFirstSearch(
                 $this->inputTree,
                 'Me (male)',
                 static function (string $item){

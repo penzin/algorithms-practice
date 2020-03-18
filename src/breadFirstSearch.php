@@ -8,7 +8,7 @@ namespace Penzin\AlgorithmsPractice;
  * @param callable $searchCriteriaFn
  * @return string|null
  */
-function breadFirstSearch(array $inputTree, string $headItemName, callable $searchCriteriaFn): ?string
+function breadthFirstSearch(array $inputTree, string $headItemName, callable $searchCriteriaFn): ?string
 {
     $graph = preparePlainGraphFromThreeRecursive($inputTree);
     $searchQueue = $graph[$headItemName];
