@@ -18,7 +18,8 @@
             "./src/selectionSort.php",
             "./src/quickSort.php",
             "./src/breadthFirstSearch.php",
-            "./src/dijkstraSearch.php"
+            "./src/dijkstraSearch.php",
+            "./src/setCoverProblem.php"
         ]
     }
 }

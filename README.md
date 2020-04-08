@@ -12,3 +12,4 @@ Just clone this repo, run `composer install` and then `./tests/run.sh`.
 * Quick sorting (recursive)
 * Breadth-first search (search shortest path in unweighted not oriented graph, BFS)
 * Dijkstra's search (search shortest path in weighted oriented graph, SPF)
+* Set cover problem algorithm
