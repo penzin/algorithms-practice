@@ -19,7 +19,8 @@
             "./src/quickSort.php",
             "./src/breadthFirstSearch.php",
             "./src/dijkstraSearch.php",
-            "./src/setCoverProblem.php"
+            "./src/setCoverProblem.php",
+            "./src/longestCommonSubstring.php"
         ]
     }
 }
