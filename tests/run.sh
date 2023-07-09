@@ -1,4 +1,3 @@
 #!/bin/bash
 
-cd tests
-/usr/bin/php ../vendor/bin/phpunit --testdox $* .
+/usr/bin/php vendor/bin/phpunit --testdox --configuration tests/phpunit.xml.dist tests $*
