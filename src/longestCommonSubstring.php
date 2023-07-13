@@ -14,9 +14,9 @@ function getLongestCommonSubstring(string $sample, array $possibleStringsArray):
         $result = 0;
         $table = [];
 
-        foreach (str_split($sample, 1) as $i => $sampleLetter)
+        foreach (str_split($sample) as $i => $sampleLetter)
         {
-            foreach (str_split($item, 1) as $j => $itemLetter)
+            foreach (str_split($item) as $j => $itemLetter)
             {
                 if ($sampleLetter !== $itemLetter) {
                     $table[$i][$j] = 0;

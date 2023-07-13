@@ -10,7 +10,9 @@ function factorialRecursive(int $number): int
 {
     if ($number < 0) {
         throw new \RuntimeException('Can\'t calculate factorial for a negative number');
-    } elseif ($number <= 1) {
+    }
+
+    if ($number <= 1) {
         return 1;
     }
 

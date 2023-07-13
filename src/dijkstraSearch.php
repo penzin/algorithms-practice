@@ -9,7 +9,6 @@ namespace Penzin\AlgorithmsPractice;
 function dijkstraSearch(array $graph): int
 {
     $costs = getCostsArray($graph);
-    $parents = getParentsArray($graph);
 
     $processed = [];
     while (($node = findLowestCostNode($costs, $processed)) !== null)
@@ -20,7 +19,6 @@ function dijkstraSearch(array $graph): int
             $newCost = $cost + $neighborCost;
             if ($costs[$neighbor] > $newCost) {
                 $costs[$neighbor] = $newCost;
-                $parents[$neighbor] = $node;
             }
         }
         $processed[] = $node;

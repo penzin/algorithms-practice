@@ -5,6 +5,7 @@ namespace Penzin\AlgorithmsPractice;
 /**
  * @param array $inputArray
  * @return array
+ * @throws \Exception
  */
 function quickSortRecursive(array $inputArray): array
 {
@@ -13,7 +14,7 @@ function quickSortRecursive(array $inputArray): array
     }
 
     $less = $greater = [];
-    $baseElementIndex = rand(0, count($inputArray) - 1);
+    $baseElementIndex = random_int(0, count($inputArray) - 1);
     $baseElement = $inputArray[$baseElementIndex];
     unset($inputArray[$baseElementIndex]);
 
