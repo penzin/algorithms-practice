@@ -1,10 +1,8 @@
 <?php
 
-namespace Penzin\AlgorithmsPractice\Tests;
+namespace Penzin\AlgorithmsPractice;
 
 use PHPUnit\Framework\TestCase;
-use function Penzin\AlgorithmsPractice\arraySumRecursive;
-use function Penzin\AlgorithmsPractice\factorialRecursive;
 
 class recursionTest extends TestCase
 {

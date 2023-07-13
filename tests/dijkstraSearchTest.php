@@ -1,12 +1,8 @@
 <?php
 
-namespace Penzin\AlgorithmsPractice\Tests;
+namespace Penzin\AlgorithmsPractice;
 
 use PHPUnit\Framework\TestCase;
-use function Penzin\AlgorithmsPractice\dijkstraSearch;
-use function Penzin\AlgorithmsPractice\findLowestCostNode;
-use function Penzin\AlgorithmsPractice\getCostsArray;
-use function Penzin\AlgorithmsPractice\getParentsArray;
 
 class dijkstraSearchTest extends TestCase
 {

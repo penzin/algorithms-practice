@@ -1,11 +1,8 @@
 <?php
 
-namespace Penzin\AlgorithmsPractice\Tests;
+namespace Penzin\AlgorithmsPractice;
 
 use PHPUnit\Framework\TestCase;
-use function Penzin\AlgorithmsPractice\findSmallestItemIndex;
-use function Penzin\AlgorithmsPractice\quickSortRecursive;
-use function Penzin\AlgorithmsPractice\selectionSort;
 
 class sortingTest extends TestCase
 {

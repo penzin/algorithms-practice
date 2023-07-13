@@ -1,9 +1,8 @@
 <?php
 
-namespace Penzin\AlgorithmsPractice\Tests;
+namespace Penzin\AlgorithmsPractice;
 
 use PHPUnit\Framework\TestCase;
-use function Penzin\AlgorithmsPractice\binarySearch;
 
 class binarySearchTest extends TestCase
 {

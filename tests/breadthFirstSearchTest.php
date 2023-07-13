@@ -1,10 +1,8 @@
 <?php
 
-namespace Penzin\AlgorithmsPractice\Tests;
+namespace Penzin\AlgorithmsPractice;
 
 use PHPUnit\Framework\TestCase;
-use function Penzin\AlgorithmsPractice\breadthFirstSearch;
-use function Penzin\AlgorithmsPractice\preparePlainGraphFromThreeRecursive;
 
 class breadthFirstSearchTest extends TestCase
 {
