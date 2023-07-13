@@ -13,4 +13,4 @@ Just clone this repo, run `composer install` and then `./tests/run.sh`.
 * Breadth-first search (search shortest path in unweighted not oriented graph, BFS)
 * Dijkstra's search (search shortest path in weighted oriented graph, SPF)
 * Set cover problem algorithm
-* Find longest common substring (dynamic programming)
+* Find the longest common substring (dynamic programming)
